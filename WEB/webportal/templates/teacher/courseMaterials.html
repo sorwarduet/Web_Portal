@@ -1,0 +1,107 @@
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || Current Course Materials {% endblock %}
+
+  {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{% block content %}
+<div class="container-fluid" >
+	<div class = "row" style ="margin-top:50px">	
+		<div class = "col-md-12">
+			{% for article in of_list %}
+			<h2>{{ article.course.title }} ( Course Materials )</h2>
+			<h3>Course Code: {{ article.course.code }}</h3>
+			<h3>Session: {{ article.session }}</h3>
+
+			{% endfor %}
+		</div>
+		<div class ="col-md-4">
+			
+		</div>
+	</div>
+
+	<div  class="row">
+
+		<div class = "col-md-10">
+			<h2>{{ m }} Items </h2>
+		</div>
+
+		<div class="col-md-2">
+		</div>
+
+	</div>
+
+<div class="container-fluid" style="margin-top:20px; height: 300px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Course Material Title</th>
+<!-- 								<th>Course Title</th>
+								<th>Course No</th> -->
+								<th>File Name</th>
+								<th>Description</th>
+								<th>Upload Date</th>
+								<th>Update Date</th>
+								<th colspan=3 style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							{% for article in info_list %}
+								<tr>
+									<td>
+										 {{ article.title }}
+									</td>
+<!-- 									<td>
+										{{ article.offeredcourse.course.title }}
+									</td>
+									<td>
+										{{ article.offeredcourse.course.code }}
+									</td> -->
+									<td>
+										{{ article.files.title }}
+									</td>
+									<td>
+										{{ article.description }}
+									</td>
+									<td>
+										{{ article.created_date }}
+									</td>
+									<td>
+										{{ article.updated_date }}
+									</td>
+
+									<td>
+										<a href="{{ MEDIA_URL }}{{ article.files.name.url }}">Download</a>
+									</td>
+									<!-- <td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Profile">Update</a>
+									</td>
+									<td>
+										<a href='#'data-toggle="tooltip" data-placement="top" title="Edit Information">Delete</a>
+									</td>
+									<td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Disable Account">Disable</a>
+									</td> -->
+								</tr>
+
+							{% endfor %}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul>
+
+ </div>
+{% endblock %}

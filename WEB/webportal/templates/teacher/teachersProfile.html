@@ -1,0 +1,38 @@
+
+ 
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || Profile {% endblock %}
+
+
+{% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+ 
+{% block content %}
+{% for article in info_list %}
+	<div class = "col-md-3 col-md-offset-1" style="margin-top:50px;">
+			<div>
+					
+					<img src="{{ MEDIA_URL }}{{ article.image.url }}"  height="250" width="200"><br /><br />
+    				<br />
+			</div>
+	</div>
+
+	<div class = "col-md-6" style="margin-top:100px;">
+	
+			
+			<div>
+	    			<p>Teacher's Name : {{ article.firstname }} {{ article.lastname }}</p>
+	    			<p>Phone No : {{ article.contact }}</p>
+	    			<p>Address : {{ article.address }}</p>
+	    			<p>Email : {{ article.email }}</p>
+	    			<p>Designation : {{ t }}</p>
+	    		
+			</div>
+
+	{% endfor %}
+	</div>
+		<div class = "col-md-6" style="margin-top:150px;">
+
+		</div>
+{% endblock %}

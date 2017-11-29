@@ -1,0 +1,217 @@
+ 
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || Final Asssesment {% endblock %}
+
+  {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{% block content %}
+	<!--<h2>Yes !</h2>-->
+	<div class="container-fluid">
+				<div class = "row" style ="margin-top:50px">	
+					<div class = "col-md-6">
+						<!-- <ul class="nav nav-tabs">
+							<li role="presentation"  ><a href="teachersAssesment">All Assesments</a></li>
+							<li role="presentation"><a href="teachersCurrentAssesment">Current Assesments</a></li>
+							<li role="presentation"><a href="prevTeachersAssesment">Previous Assesments</a></li>
+						</ul> -->
+					</div>
+					<div class ="col-md-4">
+						<!-- <h1>Final Assesments</h1> -->
+					</div>
+				</div>
+
+
+	<div class="col-md-12">
+
+		<div class = "col-md-10">
+			<h2>1  Items </h2>
+		</div>
+		
+	</div>
+
+<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="col-sm-4">
+						  <label for="sel1" class="control-label">Course No</label>
+						</div>
+						  <div class="col-sm-8">
+						  <select class="form-control" id="sel1">
+						    <option>CSE-3621</option>
+						    <option>CSE-3622</option>
+						    <option>CSE-3821</option>
+						    <option>CSE-3822</option>
+
+						  </select>
+						  </div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="col-sm-4">
+								<label for="sel2" class="control-label">Session</label>
+						</div>
+						<div class="col-sm-8">
+						<select class="form-control" id="sel3">
+							    <option>1st</option>
+							    <option>2nd</option>
+							    <optio>3rd</option>
+							    <option>4th</option>
+							    <option>5th</option>
+							    <option>6th</option>
+							  </select>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="form-group">
+							<div class="col-sm-4">
+							  <label for="sel1" class="control-label">Assesments List</label>
+							</div>
+							  <div class="col-sm-8">
+							  <select class="form-control" id="sel1">
+							    <option>Auto Generate</option>
+
+							  </select>
+							  </div>
+							</div>
+				</div>
+
+		<div class="row">
+			
+
+			<div class="col-md-12" style = "margin-top:30px;">
+				<div class="panel panel-default">
+				   	
+				   	<div class="page-header">
+					  	<h2  align="center">Total Marks <small>Class Test</small></h2>
+
+					</div>
+
+					<div class="panel-body">
+
+						<div class="container-fluid" style=" height: 300px;">
+							<div class = "row">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table table-hover">
+												<thead>
+													<tr>
+														<th>Students ID</th>
+														<th>CT-1</th>
+														<th>CT-2</th>
+
+														<th>CT-3</th>
+														<th>CT-4</th>
+														<th>CT-5</th>
+														<th>CT-6</th>
+														<th>Attendance</th>
+														<th>Total(Best 4)</th>
+													</tr>
+												</thead>
+									
+												<tbody>
+
+											{% for article in info_list %}
+												<tr>
+													<td>
+														{{ article.student.std_id }}
+													</td>
+													<td>
+														
+													</td>
+													<td>
+														{{ article.offeredcourse.course.code }}
+													</td>
+													<td>
+														{{ article.asses_type }}
+													</td>
+													<td>
+														{{ article.offeredcourse.session }}
+													</td>
+													<td>
+														{{ article.created_date }}
+													</td>
+													<td>
+														{{ article.updated_date }}
+													</td>
+													<td>
+														{{ article.updated_date }}
+													</td>
+													<td>
+														{{ article.updated_date }}
+													</td>
+
+<!-- 													<td>
+														<a href='assesmentsList' data-toggle="tooltip" data-placement="top" title="Profile">Open</a>
+													</td>
+													<td>
+														<a href='#'data-toggle="tooltip" data-placement="top" title="Edit Information">Update</a>
+													</td>
+													<td>
+														<a href='#' data-toggle="tooltip" data-placement="top" title="Disable Account">Delete</a>
+													</td> -->
+												</tr>
+
+											{% endfor %}
+
+													<!-- <tr>
+															<td>
+																124013
+															</td>
+															<td>
+																12
+															</td>
+															<td>
+																13
+															</td>
+															<td>
+																6
+															</td>
+															<td>
+																12
+															</td>
+															<td>
+																7
+															</td>
+															<td>
+																13
+															</td>
+															<td>
+																30
+															</td>
+															<td>
+																80
+															</td>
+															
+													</tr> -->
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul>
+
+</div>
+{% endblock %}

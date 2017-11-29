@@ -1,0 +1,51 @@
+
+{% extends 'student/Headerstudents.html' %}
+
+
+		 {% block profile_name %}			 	
+			 	{{ u_list }}
+
+		{% endblock %}
+
+
+{% block title %} Students Home Page {% endblock %}
+
+	{% block content %}
+	<div class = "col-md-3 col-md-offset-9" style="margin-top:50px;">
+		<form method="GET" action="" class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				<input type="text" name="query" data-toggle='tooltip' data-placement='top' title='Find Employee' class="form-control" placeholder="Search Anythings">
+			</div>
+				<button type="submit" class="btn btn-default">Search</button>
+		{% if found_entries %}
+	    <p>You searched for "{{ query_string }}".</p>
+	    <ul>
+	        {% for i in found_entries %}
+	            {{ i.uid }} {{ i.title }} {{ value|linebreaks }}
+	        {% endfor %}
+		</ul>
+		{% endif %}
+
+		{% if query_string and not found_entries %}
+		    <p>No results found.</p>
+		{% else %}
+		    <p>Type a search query into the box above, and press "Submit" to search.</p>
+		{% endif %}
+
+		</form>
+	</div>
+
+	<div class="container-fluid">
+		<div class = "col-md-12">
+			<div style="margin-top:100px; margin-bottom: 300px;" class="text-center">
+				<p style ="font-family:Georgia; font-size:60px;">Students Panel</p>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+	{% endblock %}

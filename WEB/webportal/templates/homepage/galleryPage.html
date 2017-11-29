@@ -1,0 +1,166 @@
+{% extends "homepage/header.html" %}
+
+<title> {% block title %}Gallery{% endblock %}</title>
+
+
+
+{% block style %}
+    <style>
+
+
+
+    .g_h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+
+     </style>
+}
+{% endblock %}
+
+{% block content %}
+
+
+        <div class="container">
+            <div class="text-center">
+              <b> <h2 class="text-success g_h2" >Gallery</h2></b>
+            </div>
+
+            
+           <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="#" data-filter="*">Students</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Teachers</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Lab</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Class Room</a></li>
+            </ul><!--/#portfolio-filter-->
+
+            <div class="row">
+                <div class="portfolio-items">
+                    <div class="portfolio-item apps col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item10.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">View Picture</a></h3>
+                                    <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item1.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item2.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h3><a href="#">View Picture</a></h3>
+                                     <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item2.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item3.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                 <h3><a href="#">View Picture</a></h3>
+                                     <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item3.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item4.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">View Picture</a></h3>
+                                    <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item4.JPG" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item5.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h3><a href="#">View Picture</a></h3>
+                                     <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item5.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item6.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                   <h3><a href="#">View Picture</a></h3>
+                                     <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item6.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item7.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                     <h3><a href="#">View Picture</a></h3>
+                                    <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item7.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item8.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                     <h3><a href="#">View Picture</a></h3>
+                                     <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item8.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+
+                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-6 col-md-4">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="{{ STATIC_URL }}galleryImage/item9.JPG"  alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                     <h3><a href="#">View Picture</a></h3>
+                                    <!-- <p>Developer will add text after a meet up with committee</p> -->
+                                    <a class="preview" href="{{ STATIC_URL }}galleryImage/item9.JPG"  rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+                </div>
+            </div>
+        </div>
+
+
+
+{% endblock %}
+
+

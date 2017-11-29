@@ -1,0 +1,140 @@
+{% extends "adminpage/adminHeader.html" %}
+
+
+	<title> {% block title %}Add Course Here{% endblock %}</title>
+
+	{% block content %}
+	
+<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				
+			</div>
+
+			<div class="col-md-6" style = "margin-top:30px;">
+				<div class="panel panel-default">
+				   	<div class="page-header">
+					  	<h2  align="center">Add Course Here <small>Here</small></h1>
+					</div>
+					<div class="panel-body">
+						<form method="post" action="index.php" class="form-horizontal" role="form">
+						
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<h5>Select Courses for Store in Data Base </h5>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+							  <label for="sel1" class="control-label">Course No</label>
+							</div>
+						  <div class="col-sm-7">
+						  		<input type="text" placeholder="Course Code" class="form-control"></input>
+						  </div>
+						</div>
+
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Course Title</label>
+						</div>
+						  <div class="col-sm-7">
+						  		<input type="text" placeholder="Course Title" class="form-control"></input>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Course Type</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						    <option>Theory</option>
+						    <option>Practical</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="credit" class="control-label">Credit</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="credit">
+						    <option>.75</option>
+						    <option>1.5</option>
+						    <option>3</option>
+						    <option>4</option>
+						    <option>10</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="year" class="control-label">Year</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="year">
+						    <option>1st </option>
+						    <option>2nd</option>
+						    <option>3rd</option>
+						    <option>4th</option>
+						  </select>
+						  </div>
+						</div>
+
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="year" class="control-label">Semester</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="year">
+						    <option>1st </option>
+						    <option>2nd</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<label for="sel2" class="control-label">Description</label>
+							
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							
+							</div>
+						</div>
+						
+
+						<div class="form-group">
+							<div class="col-sm-offset-9 col-sm-1">
+							<input type="submit" name="submit" value="submit"/>
+							</div>
+						</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+
+	{% endblock %}

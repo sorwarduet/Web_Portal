@@ -1,0 +1,48 @@
+{% extends 'student/Headerstudents.html' %}
+{% block title %} Student || Students Profile{% endblock %}
+<link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css">
+<link rel="shortcut icon" href="{{STATIC_URL}}hrlogo.png">
+
+	{% block profile_name %}			 	
+			 	
+				{% for article in info_list %}
+				    {{ article.username }} 
+				{% endfor %}
+				     
+	{% endblock %}
+
+{% block content %}
+	<div class="container-fluid" style="margin-top:50px; ">
+		{% for article in info_list %}
+		<div class = "col-md-3 col-md-offset-1" style="margin-top:50px;">
+			<div >
+					<img src="{{ MEDIA_URL }}{{ article.image.url }}"  height="250" width="250"><br /><br />
+			</div>
+		</div>
+
+		<div class = "col-md-6" style="margin-top:50px;">
+			<div>
+				 
+	    			<p>Student's Name : {{ article.firstname }} {{ article.lastname }}</p>
+	    			<p>Password : {{ article.password }}</p>
+	    			<p>Phone No : {{ article.contact }}</p>
+	    			<p>Address : {{ article.address }}</p>
+	    			<p>Email : {{ article.email }}</p>
+	    			{% for a in s_data %}
+		    			<p>Year : {{ a.year }}</p>
+		    			<p>Semester : {{ a.semester }}</p>
+		    			<p>Session : {{ a.session }}</p>
+		    			<p>Student Id : {{ a.std_id }}</p>
+		    		{% endfor %}
+				{% endfor %}
+
+			</div>
+		</div>
+
+		<div class = "col-md-6" style="margin-top:50px;">
+
+		</div>
+
+	</div>
+
+{% endblock %}

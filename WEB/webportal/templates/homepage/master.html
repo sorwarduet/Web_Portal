@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title> {% block title %}Django life {% endblock %}</title>
+
+
+ <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-theme.min.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/signin.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/sticky-footer.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/sticky-footer-navbar.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/the-big-picture.css">
+
+
+ <script type="application/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script type="application/javascript" src="{{ STATIC_URL }}js/page.js"></script>
+
+
+    {% block head %} {% endblock %}
+</head>
+<body>
+
+    {% block body %}
+
+    {% endblock %}
+
+</body>
+</html>

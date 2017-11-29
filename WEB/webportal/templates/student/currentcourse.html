@@ -1,0 +1,85 @@
+{% extends 'student/Headerstudents.html' %}
+{% block title %} Current Courses {% endblock %}
+
+{% block profile_name %}			 	
+			 	{{ u_list }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class = "row" style ="margin-top:50px">	
+			<div class = "col-md-6">
+				<ul class="nav nav-tabs">
+					<li role="presentation"><a href="studentsAllCourse">All Courses</a></li>
+					<li role="presentation" class="active"><a href="studentsCurrentcourse">Current Courses</a></li>
+					<li role="presentation"><a href="studentsPrevCourse">Previous Courses</a></li>
+
+				</ul>
+			</div>
+
+			<div class ="col-md-6">
+				<h1>Course Offered To Student</h1>
+			</div>
+
+			<div class = "col-md-12">
+
+				<h2>{{ m }} Items </h2>
+			</div>
+
+	</div>
+
+
+<div class="container-fluid" style="margin-top:20px; height: 300px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Course Title</th>
+								<th>Course No</th>
+								<th>Credit</th>
+								<th colspan=2 style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for article in info_list %}
+							<tr>
+							
+								<td>
+									{{ article.offeredcourse.course.title }}
+								</td>
+								<td>
+									{{ article.offeredcourse.course.code }}
+								</td>
+								<td>
+									{{ article.offeredcourse.course.Credit }}
+								</td>
+
+								<td>
+									<a href="/stdCourseMaterials?id={{ article.offeredcourse.id }}" data-toggle="tooltip" data-placement="top" title="Show Materials" target="_blank">Materials</a>
+								</td>
+								<td>
+									<a href="/studentviewFinalAssesments?id={{ article.offeredcourse.id }}" data-toggle="tooltip" data-placement="top" title="Show Assesments" target="_blank">Assesment</a>
+								</td>
+
+							</tr>
+
+							{% endfor %}
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- <ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul> -->
+</div>
+
+{% endblock %}

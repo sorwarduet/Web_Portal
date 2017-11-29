@@ -1,0 +1,192 @@
+<!-- {{ context }} -->
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Students{% endblock %}</title>    
+	 <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-theme.min.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/signin.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/sticky-footer.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/sticky-footer-navbar.css">
+    <link  rel="stylesheet" href="{{ STATIC_URL }}css/the-big-picture.css">
+    <link  rel="icon" type="image/png" href="{{ STATIC_URL }}img/hrlogo.png">
+    <link rel="stylesheet" type="image/png" href="{{ STATIC_URL }}img/hrlogo.png">
+    <script type="application/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script type="application/javascript" src="{{ STATIC_URL }}js/page.js"></script>
+ 	<link  rel="icon" href="{{ STATIC_URL }}img/hrlogo.png">
+	<script type="application/javascript">
+		$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+	{% block head %} {% endblock %}
+		
+		<style>
+		{% block styles %}
+		{% endblock %}
+			body {
+			margin-top: 50px;
+			margin-bottom: 50px;
+			background: url('{% static 'background2.jpg' %}') no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			}
+			.cleardiv
+			{
+				clear: both;
+			}
+			.navbar-default{
+			opacity: .9;
+			}
+			.dropdown:hover .dropdown-menu {
+			display: block;
+			}
+			.panel-default{
+			opacity: .9;
+			}
+
+			#login-wrapper
+			{
+				color:#000000;
+				text-align: center;
+			}
+			hr.message-inner-separator
+			{
+			    clear: both;
+			    margin-top: 10px;
+			    margin-bottom: 13px;
+			    border: 0;
+			    height: 1px;
+			    background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+			    background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+			    background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+			    background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+			}
+		</style>
+  </head>
+
+
+<body>
+
+			<div class="container-fluid">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				  <div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <strong>
+						<a  href="StudentsDashboard"><img src="{{ STATIC_URL }}img/studentDash.png"></a>
+					  </strong>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li >
+							<a href="studentsProfile" >Profile</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Coursess <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="studentsAllCourse">All Courses</a></li>
+									<li><a href="studentsCurrentcourse">Current Courses</a></li>
+									<li><a href="studentsPrevCourse">Previous Courses</a></li>
+								</ul>
+						</li>
+						<li >
+							<a href="studentsBLogs" >Blogs</a>
+						</li>
+
+						<li >
+							<a href="studentsforum" >Forum</a>
+						</li>
+
+						<li >
+							<a href="RegistrationStatus" >Registration Status</a>
+						</li>
+
+
+						<li >
+							<a href="#" >Class Routine</a>
+						</li>
+
+
+						<li >
+							<a href="studentProfileUpdate" >Update Profile</a>
+						</li>
+
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<p class="navbar-text">Welcome! 
+						<strong>
+							
+
+
+							{% block profile_name %}			 	
+			 					 
+							{% endblock %}
+
+
+							 
+
+
+						</strong></p>
+						<li><p class="navbar-text"><a href="Logout" class="navbar-link" title="Log Out">Logout</a></p></li>
+					</ul>
+
+					
+
+					</div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+			</div>
+    		{% block content %}
+		
+			{% endblock %}
+
+			<style type="text/css">
+				#footer{background: #F8F8EE;font-size: 16px;height: 50px;width: 100%;padding-top: 20px;}
+				#footer-wrapper
+				{width: 980px; margin: 0 auto;padding:0 auto;color:#000000;text-align: center;}
+				a{color: #000000;}
+				a:hover{color: #000000;}
+			</style>
+			<div class="cleardiv"></div>
+			<footer>	
+				<div class="container text-center">
+				    <small>
+					    	<a href="#">Home </a> | 
+					    	<a href="#">Privacy & Policy </a> |
+					    	<a href="#">Terms and Conditions </a> |
+					    	<a href="#">About us</a>
+					    </small>
+				    <small>&copy; 2016 DUET CSE Department.All rights reserved.</small>
+				</div>
+			</footer>
+
+
+				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			    <script src="bootstrap/js/bootstrap.min.js"></script>
+				<script src="bootstrap/js/js.js"></script>
+
+				<script>
+					$(document).ready(function(){
+						{% block jquery %} {% endblock %}
+						});
+				</script>
+	</body>
+</html>

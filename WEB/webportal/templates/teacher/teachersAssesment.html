@@ -1,0 +1,99 @@
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || All Assesments {% endblock %}
+
+  {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{% block content %}
+
+
+<div class = "row" style ="margin-top:50px">	
+					<div class = "col-md-6">
+
+					</div>
+					<div class ="col-md-4">
+						<h1>Assesments</h1>
+					</div>
+				</div>
+
+	<div class="col-md-12">
+
+		<div class = "col-md-10">
+			<h2>{{ m }}  Items </h2>
+		</div>
+
+		<div class="col-md-2">
+			<p class="text-right"><a href = "teachersNewAssesment"><button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add Employee">Add New Assesments</button></a></p>
+		</div>
+
+	</div>
+
+<div class="container-fluid" style="margin-top:80px; height: 300px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Course Title</th>
+								<th>Course No</th>
+								<th>Types</th>
+								<th>Session/Batch</th>								
+								<!-- <th> Upload Date </th> -->
+								<th colspan="3" style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+			
+							{% for article in info_list %}
+								<tr>
+									<td>
+										{{ article.title }}
+									</td>
+									<td>
+										{{ article.offeredcourse.course.title }}
+									</td>
+									<td>
+										{{ article.offeredcourse.course.code }}
+									</td>
+									<td>
+										{{ article.asses_type }}
+									</td>
+									<td>
+										{{ article.offeredcourse.session }}
+									</td>
+									<td>
+										{{ article.created_date }}
+									</td>
+									<td>
+										{{ article.updated_date }}
+									</td>
+
+									<td>
+										<a href="/assesments?id={{ article.id }}" data-toggle="tooltip" data-placement="top" title="View Assesments" target="_blank">Open</a>
+									</td>
+									<td>
+										<a href='#'data-toggle="tooltip" data-placement="top" title="Edit Information">Update</a>
+									</td>
+									<td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Disable Account">Delete</a>
+									</td>
+								</tr>
+
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul>
+
+{%  endblock %}

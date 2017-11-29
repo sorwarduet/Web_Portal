@@ -1,0 +1,166 @@
+{% extends 'student/Headerstudents.html' %}
+{% block title %} Students Profile Update{% endblock %}
+
+	{% block profile_name %}			 	
+		{% for article in info_list %}
+			{{ article.username }} 
+		{% endfor %}
+	{% endblock %}
+{% block content %}	
+<div class="container-fluid" style="margin-top:50px; margin-bottom: 230px;">
+	{% for article in info_list %}
+	<div class = "col-md-3 col-md-offset-1" style="margin-top:50px;">
+		<div >
+			<img src="{{ MEDIA_URL }}{{ article.image.url }}"  height="250" width="250"><br /><br />
+			
+	    			
+	    				<p>Student's Name : <b>{{ article.firstname }} {{ article.lastname }}</b></p>
+						<p>Student's Name : <b>{{ article.username }}</b></p>
+		    			<p>Password : <b>{{ article.password }}</b></p>
+		    			<p>Phone No : <b>{{ article.contact }}</b></p>
+		    			<p>Address : <b>{{ article.address }}</b></p>
+		    			<p>Email : <b>{{ article.email }}</b></p>
+		    			{% for a in s_data %}
+			    			<p>Year : <b>{{ a.year }}</b></p>
+			    			<p>Semester : <b>{{ a.semester }}</b></p>
+			    			<p>Session : <b>{{ a.session }}</b></p>
+			    			<p>Student Id : <b>{{ a.std_id }}</b></p>
+			    		{% endfor %}
+		</div>
+	</div>
+
+<div class = "col-md-8" style="margin-top:50px;">			
+	<div class="container">
+		<div class="col-md-6">
+				<div class="panel panel-default">
+				   	<div class="page-header">
+					  	<h2  align="center">Update Here </h2>
+					</div>
+					<div class="panel-body">
+						<form method="post" action="" class="form-horizontal" role="form">
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<h5>Edit Your Personal Details Below</h5>
+
+							</div>
+						</div>
+						<div class="form-group">
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">First Name</label>
+							</div>
+							<div class="col-sm-7 ">
+								<input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name" value="{{ article.firstname }}" required autofocus>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">Last Name</label>
+							
+							</div>
+							
+							<div class="col-sm-7">
+								<input type="text" id="firstName" name="lastName" class="form-control" placeholder="Last Name" value="{{ article.lastname }}" required autofocus>
+								
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">User Name</label>
+							
+							</div>							
+							<div class="col-sm-7">
+								<input type="text" id="username" name="email" class="form-control" placeholder="username" value="{{ article.username }}" required autofocus>
+								
+							</div>
+						</div>
+						<!-- <div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">Student ID</label>
+							
+							</div>	
+							
+							<div class="col-sm-7">
+								<input type="text" id="studentId" name="studentId" class="form-control" placeholder="Student Id" value="{{ article.id }}" required autofocus>
+								
+							</div>
+						</div> -->
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">Email </label>
+							
+							</div>	
+							
+							<div class="col-sm-7">
+								<input type="text" id="email" name="email" class="form-control" placeholder="Email" value="{{ article.email }}" required autofocus>
+								
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-5">
+								<label for="sel2" class="control-label">Current Password </label>
+							
+							</div>								
+							<div class="col-sm-5">
+								<input type="text" id="password" name="password" class="form-control" placeholder="Password" value="{{ article.password }}" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-5">
+								<label for="sel2" class="control-label">New Password </label>
+							
+							</div>								
+							<div class=" col-sm-5">
+								<input type="text" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="New Password" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">Mobile </label>
+							</div>	
+							<div class="col-sm-7">
+								<input type="text" id="ContactNo" name="ContactNo" class="form-control" placeholder="Contact No" value="{{ article.contact }}" required autofocus>
+								
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<label for="sel2" class="control-label">Address</label>
+							
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<textarea class="form-control" rows="5" id="comment">{{article.address}}</textarea>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+							<button type="submit" class="btn blue pull-right">
+							Update
+							</button>   
+							
+							</div>
+						</div>
+
+						</form>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+</div>
+{% endfor %}
+{% endblock %}

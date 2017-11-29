@@ -1,0 +1,15 @@
+ <h1>HI</h1>
+
+
+{{ info_list.id }}
+{% for token in info_list %}
+    <tr>
+
+           <td> {{ token.username }} </td>
+          <td>   {{ token.password }}</td>
+          <td>   {{ token.id }}</td>
+
+            
+
+    </tr>
+{% endfor %}

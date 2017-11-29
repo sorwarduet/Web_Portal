@@ -1,0 +1,186 @@
+{% extends "adminpage/adminHeader.html" %}
+
+
+
+	<title> {% block title %}CE Student List{% endblock %}</title>
+
+	{% block content %}
+<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				
+			</div>
+
+			<div class="col-md-6" style = "margin-top:30px;">
+				<div class="panel panel-default">
+				   	<div class="page-header">
+					  	<h2  align="center">Select Course to be Offered to the Teacher <small>Here</small></h1>
+					</div>
+					<div class="panel-body">
+						<form method="post" action="index.php" class="form-horizontal" role="form">
+						
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<h5>Select Courses for Particular Teachers</h5>
+							</div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Department</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						    <option>CSE</option>
+						    <option>EEE</option>
+						    <option>ME</option>
+						    <option>CE</option>
+						    <option>TE</option>
+						    <option>ARCH</option>
+						    <option>IP</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Course No</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						    <option>CSE-3621</option>
+						    <option>CSE-3622</option>
+						    <option>CSE-3821</option>
+						    <option>CSE-3822</option>
+						    <option>CSE-3221</option>
+						    <option>CSE-3222</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Course Title</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						    <option>Auto Generate</option>
+						  </select>
+						  </div>
+						</div>
+
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="year" class="control-label">Session</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="year">
+						    <option>2010</option>
+						    <option>2011</option>
+						    <option>2012</option>
+						    <option>2013</option>
+						    <option>2014</option>
+						    <option>2015</option>
+						    <option>2016</option>
+						    <option>2017</option>
+						  </select>
+						  </div>
+						</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="year" class="control-label">Year</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="year">
+						    <option>1st </option>
+						    <option>2nd</option>
+						    <option>3rd</option>
+						    <option>4th</option>
+						  </select>
+						  </div>
+						</div>
+
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="year" class="control-label">Semester</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="year">
+						    <option>1st </option>
+						    <option>2nd</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="credit" class="control-label">Credit</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="credit">
+						    <option>.75</option>
+						    <option>1.5</option>
+						    <option>3</option>
+						    <option>4</option>
+						    <option>10</option>
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-10">
+						  <label for="sel1" class="control-label">Select Department of Teachers</label>
+						</div>
+						</div>
+						<div class="form-group">
+						  <div class=" col-sm-offset-4 col-sm-4">
+						  <select class="form-control" id="sel1">
+						    <option>CSE</option>
+						    <option>EEE</option>
+						    <option>ME</option>
+						    <option>CE</option>
+						    <option>TE</option>
+						    <option>ARCH</option>
+						    <option>IP</option>
+						  </select>
+						  </div>
+						</div>						
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Select Teacher </label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						    <option>Auto Generate</option>
+						  </select>
+						  </div>
+						</div>	
+
+						<div class="form-group">
+							<div class="col-sm-offset-9 col-sm-3">
+									<input type="submit" name="submit" value="submit"/>
+							</div>
+						</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+
+	{% endblock %}

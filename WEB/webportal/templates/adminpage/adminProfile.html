@@ -1,0 +1,39 @@
+{% extends "adminpage/adminHeader.html" %}
+
+
+	<title> {% block title %}CE Student List{% endblock %}</title>
+
+	{% block content %}
+	
+<div class="container-fluid" style="margin-top:50px; margin-bottom: 270px;">
+			<div class="row">
+				<?php include ('adminHeader.php'); ?>
+			</div>
+
+
+		<div class = "col-md-3 col-md-offset-1" style="margin-top:50px;">
+			<div >
+					<img src="../img/Imran Masud.jpg"  height="250" width="250"><br /><br />
+
+			</div>
+		</div>
+
+		<div class = "col-md-6" style="margin-top:50px;">
+			<div >
+				Student's name : <b>Imran Masud</b><br />
+				Students's id : <b>124013</b><br />
+				Phone No : <b>01925527821</b><br />
+				Address: <b>DUET Gate,Gazipur</b><br />
+				Email Address : <b>eimran.cse@gmail.com</b><br />
+
+			</div>
+		</div>
+
+		<div class = "col-md-6" style="margin-top:50px;">
+
+		</div>
+
+	</div>
+
+
+	{% endblock %}

@@ -1,0 +1,94 @@
+ 
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || Final Asssesment {% endblock %}
+
+ {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{% block content %}
+	<!--<h2>Yes !</h2>-->
+	<div class="container-fluid">
+				<div class = "row" style ="margin-top:50px">	
+					<div class = "col-md-6">
+						<ul class="nav nav-tabs">
+							<li role="presentation"  ><a href="teacherFinalAssesment">All Final Assesments</a></li>
+							<li role="presentation" class="active"><a href="currentTeachersAssesmentFinal">Current Final Assesments</a></li>
+							<li role="presentation"><a href="prevFinalTeachersAssesment">Previous Final  Assesments</a></li>
+						</ul>
+					</div>
+					<div class ="col-md-4">
+						<h1>Final Assesments</h1>
+					</div>
+				</div>
+<div class="col-md-12">
+
+		<div class = "col-md-10">
+			<h2>1  Items </h2>
+		</div>
+		
+	</div>
+
+<div class="container-fluid" style="margin-top:80px; height: 300px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Course Title</th>
+								<th>Course No</th>
+								<th>Types</th>
+								<th>Session/Batch</th>
+								<th>Year</th>
+								<th>Semester</th>
+								<th colspan=3 style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+			
+							<tr>
+									<td>
+										Operating Systems
+									</td>
+									<td>
+										CSE-3221
+									</td>
+									<td>
+										Class Test
+									</td>
+									<td>
+										13th
+									</td>
+																
+									<td>
+										3rd
+									</td>
+
+									<td>
+										6th
+									</td>
+
+									<td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Profile">Open</a>
+									</td>
+									<td>
+										<a href='#'data-toggle="tooltip" data-placement="top" title="Edit Information">Update</a>
+									</td>
+									
+							</tr>
+
+
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+</div>
+{% endblock %}

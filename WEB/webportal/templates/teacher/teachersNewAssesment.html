@@ -1,0 +1,185 @@
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || New  Assesments {% endblock %}
+
+  {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{% block content %}
+
+
+ <div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-header">
+						<h1>Particular Assesments Details</h1>
+					</div>
+				</div>
+			</div>
+
+			
+
+		<div class="row">
+			<div class="col-md-1">
+				
+			</div>
+
+			<div class="col-md-10" style = "margin-top:30px;">
+				<div class="panel panel-default">
+				   	
+				   	<div class="page-header">
+					  	<h2  align="center">Add Assesments Marks <small>Here</small></h2>
+					</div>
+					
+					<div class="panel-body">
+						<form method="post" action="index.php" class="form-horizontal" role="form">
+						
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<h5>Enter Course Information Here</h5>
+
+							</div>
+
+						</div>
+
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Course No</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						   {% for article in info_list %}
+						    <option>
+						    	{{ article.offeredcourse.course.code }}
+						    </option>	
+						  {% endfor %}	
+						  </select>
+						  </div>
+						</div>
+
+
+						<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-3">
+						  <label for="sel1" class="control-label">Course Title</label>
+						</div>
+						  <div class="col-sm-7">
+						  <select class="form-control" id="sel1">
+						  {% for article in info_list %}
+						    <option>
+						    	{{ article.offeredcourse.course.title }}
+						    </option>	
+						  {% endfor %}
+
+
+						  </select>
+						  </div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">Assesment Title</label>
+							</div>
+							<div class="col-sm-7">
+									<input type="text" id="contact" name="contact" class="form-control" placeholder="title"required>
+								
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-3">
+								<label for="sel2" class="control-label">Session/Batch</label>
+							</div>
+							<div class="col-sm-7">
+									<input type="text" id="contact" name="contact" class="form-control" placeholder="batch"required>
+								
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table  class="table table-bordered">     
+							        			<tr>
+							          				<th >Studnet Id</th>
+							          				<th>Marks</th>
+							          				<th >Studnet Id</th>
+							          				<th>Marks</th>
+												</tr>
+											<tbody>
+										        <tr class="success">
+										          <td>124001</td>
+										          <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          <td>124005</td>
+										          <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          
+										        </tr>
+										         <tr class="active">
+									          	<td>124002</td>
+									         	<td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+									         	<td>124006</td>
+										         <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          
+										       
+										        </tr>
+										         <tr class="info">
+										          <td>124003</td>
+										          <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          <td>124007</td>
+										          <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          
+										          
+										        </tr>
+										        <tr class="active">
+										          <td>124004</td>
+										          <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          <td>124008</td>
+										          <td><input type="text" style="width:50px;height:30px;" value="0" /></td>
+										          
+										          
+										        </tr>
+										      </tbody>
+
+
+
+
+
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+
+							<input type="submit" name="upload" value="UPLOAD"/>
+							
+							</div>
+						</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-1">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+
+{%  endblock %}

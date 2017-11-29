@@ -1,0 +1,71 @@
+{% extends "admin/header.html" %}
+
+
+	<title> {% block title %}CE Student List{% endblock %}</title>
+
+	{% block content %}
+<div class="container-fluid">
+				<div class = "row" style ="margin-top:50px">	
+					<div class = "col-md-4">
+						<ul class="nav nav-tabs">
+							<li role="presentation"><a href="allCourse.php">All Courses</a></li>
+							<li role="presentation"><a href="currentCourse.php">Current Courses</a></li>
+							<li role="presentation" class="active"><a href="prevCourse.php">Previous Courses</a></li>
+
+						</ul>
+					</div>
+					<div class ="col-md-6">
+						<h1>Course Taken By Teachers</h1>
+					</div>
+				</div>
+
+
+	<div class="col-md-12">
+			<div class = "col-md-12">
+				<h2>1  Items </h2>
+			</div>
+
+	</div>
+
+<div class="container-fluid" style="margin-top:80px; height: 300px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Course Title</th>
+								<th>Course No</th>
+								<th colspan=3 style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+			
+							
+							<tr>
+									<td>
+										Operating System
+									</td>
+									<td>
+										CSE-3421
+									</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul>
+
+
+
+</div>
+
+	{% endblock %}

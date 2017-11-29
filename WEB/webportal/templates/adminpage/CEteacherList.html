@@ -1,0 +1,105 @@
+{% extends "admin/header.html" %}
+
+
+	<title> {% block title %}CE Teacher List{% endblock %}</title>
+
+	{% block content %}
+	
+<div class="container-fluid">
+				<div class = "row" style ="margin-top:50px">	
+					<div class = "col-md-4">
+						<ul class="nav nav-tabs">
+							<li role="presentation" ><a href="teacherList.php">All</a></li>
+							<li role="presentation" ><a href="cseTeacherList.php">CSE</a></li>
+							<li role="presentation" class="active"><a href="CEteacherList.php">CE</a></li>
+							<li role="presentation" ><a href="meTeacherList.php">ME</a></li>
+						</ul>
+					</div>
+					<div class ="col-md-4">
+						<h1>CE Teacher List</h1>
+					</div>
+				</div>
+	<div class="col-md-12">
+			<div class = "col-md-10">
+
+				<h2> 10 Teachers </h2>
+
+			</div>
+
+			<div class="col-md-2">
+				<p class="text-right"><a href = "add_emp.php"><button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add Employee">Add New User</button></a></p>
+			</div>
+	</div>
+
+
+
+<div class="container-fluid" style="margin-top:80px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>User ID</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Contact Number</th>
+								
+								<th>Status</th>
+								<th>Date Added</th>
+								<th colspan=3 style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+									<td>
+										124013
+									</td>
+									<td>
+										Imran
+									</td>
+									<td>
+										Masud
+									</td>
+									<td>
+										01673662719
+									</td>
+									
+									<td>
+										Active
+									</td>
+									<td>
+										15-03-2016
+									</td>
+
+									<td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Profile">Profile</a>
+									</td>
+									<td>
+										<a href='#'data-toggle="tooltip" data-placement="top" title="Edit Information">Edit</a>
+									</td>
+									<td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Disable Account">Disable</a>
+									</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+						 <ul class='pagination '> <li><a href='#'>1</a></li></ul>
+	
+</div>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+	{% endblock %}

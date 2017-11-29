@@ -1,0 +1,114 @@
+
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || Current Assesments {% endblock %}
+
+
+
+ {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{%  block content %}
+
+<div class="container-fluid">
+				<div class = "row" style ="margin-top:50px">	
+					<div class = "col-md-6">
+						<ul class="nav nav-tabs">
+							<li role="presentation" ><a href="teachersAssesment">All Assesments</a></li>
+							<li role="presentation" class="active"><a href="teachersCurrentAssesment">Current Assesments</a></li>
+							<li role="presentation"><a href="prevTeachersAssesment">Previous Assesments</a></li>
+
+						</ul>
+					</div>
+					<div class ="col-md-4">
+						<h1>Assesments</h1>
+					</div>
+				</div>
+
+
+	<div class="col-md-12">
+
+		<div class = "col-md-10">
+			<h2>1  Items </h2>
+		</div>
+
+		<div class="col-md-2">
+			<p class="text-right"><a href = "teachersNewAssesment"><button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add Employee">Add New Assesments</button></a></p>
+		</div>
+
+	</div>
+
+<div class="container-fluid" style="margin-top:80px; height: 300px;">
+	<div class = "row">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>ID
+								<th>Title</th>
+								<th>Course Title</th>
+								<th>Course No</th>
+								<th>Types</th>
+								<th>Session/Batch</th>
+								<th>Total Marks</th>
+								<th> Upload Date </th>
+								<th colspan=3 style="text-align:center">Actions</th>
+							</tr>
+						</thead>
+			
+							<tr>
+									<td>
+										1
+									</td>
+									<td>
+										CT-1
+									</td>
+
+									<td>
+										Operating Systems
+									</td>
+									<td>
+										CSE-3221
+									</td>
+									<td>
+										Class Test
+									</td>
+									<td>
+										13th
+									</td>
+																
+									<td>
+										15
+									</td>
+
+									<td>
+										15-04-2016
+									</td>
+									<td>
+										<a href='assesmentsList' data-toggle="tooltip" data-placement="top" title="Profile">Open</a>
+									</td>
+									<td>
+										<a href='#'data-toggle="tooltip" data-placement="top" title="Edit Information">Update</a>
+									</td>
+									<td>
+										<a href='#' data-toggle="tooltip" data-placement="top" title="Disable Account">Delete</a>
+									</td>
+							</tr>
+
+
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul>
+{%  endblock %}

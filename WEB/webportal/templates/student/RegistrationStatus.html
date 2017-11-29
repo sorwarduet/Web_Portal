@@ -1,0 +1,91 @@
+ 
+{% extends 'student/Headerstudents.html' %}
+
+{% block title %} Student || Registration Status {% endblock %}
+
+  {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+
+
+
+
+{% block content %}
+	<!--<h2>Yes !</h2>-->
+<div class="container-fluid">
+	<div class = "row" style ="margin-top:50px">
+		<div class = "col-md-12" style="text-align: center;">
+			
+		</div>
+		
+	</div>
+</div>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12" style = "margin-top:30px;">
+			<div class="panel panel-default">
+			   	<div class="page-header">
+				  	<h2  align="center">Credit Calculation</h2>
+
+				</div>
+
+				<div class="panel-body">
+
+					<div class="container-fluid" style=" height: 300px;">
+						<div class = "row">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-hover">
+											<thead>
+												<tr>
+													<th>Credit Completed</th>
+													
+															<th>
+																{{ c }}
+															</th>				
+												</tr>
+
+												<tr>
+													<th>Credit in Running </th>
+													
+															<th>
+																{{ r }}
+															</th>				
+												</tr>
+
+											</thead>
+								
+											<tbody>
+	
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% for p in sce_list %}
+	{{ p.offeredcourse.course.Credit}}
+{% endfor %}

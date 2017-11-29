@@ -1,0 +1,78 @@
+{% extends 'teacher/teacherHeader.html' %}
+{% block title %} Teacher || Final Asssesment {% endblock %}
+
+  {% block profile_name %}			 	
+	{{ u_list }}								 					 
+{% endblock %}
+{% block content %}
+	<!--<h2>Yes !</h2>-->
+<div class="container-fluid">
+	<div class = "row" style ="margin-top:50px">
+		<div class = "col-md-12" style="text-align: center;">
+			{% for article in mat_list %}
+			<h2>{{ article.offeredcourse.course.title}} ( Course Assesments )</h2>
+			<h3>Course Code: {{ article.offeredcourse.course.code }}</h3>
+			<h3>Session: {{ article.offeredcourse.session }}</h3>
+
+			{% endfor %}
+		</div>
+		
+	</div>
+</div>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12" style = "margin-top:30px;">
+			<div class="panel panel-default">
+			   	<div class="page-header">
+			   	{% for article in mat_list %}
+				  	<h2  align="center">{{ article.title }}  <small>Class Test</small></h2>
+				{% endfor %}
+				</div>
+
+				<div class="panel-body">
+
+					<div class="container-fluid" style=" height: 300px; width: 500px;">
+						<div class = "row">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-hover">
+											<thead>
+												<tr>
+													<th>Students ID</th>
+													<th>Marks</th>
+
+												</tr>
+
+													{% for article in info_list %}
+													<tr>
+													
+														<td> {{ article.student }} </td>
+														<td> {{ article.mark }} </td>
+
+													</tr>
+													{% endfor %}
+												
+											</thead>
+								
+											<tbody>
+	
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <ul class='pagination '> <li>&nbsp<a href = '#'>1</a></li></ul>
+
+<ul class='pagination '> <li>&nbsp<a href = '#'>2</a></li></ul> -->
+
+</div>
+{% endblock %}
